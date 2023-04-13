@@ -1,0 +1,11 @@
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/functions";
+@import "./utils/placeholders";
+@import "./base/typography";
+@import "./base/base";
+
+h1 h2 {
+    font-size: $roboto;
+    font-weight: 700;
+}
