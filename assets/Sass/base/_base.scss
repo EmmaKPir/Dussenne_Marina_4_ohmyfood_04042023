@@ -2,86 +2,38 @@
 @use "../utils/mixins" as *;
 @use "../utils/placeholders" as *;
 
+body {
+    font-family: $text;
+}
 
 h1 {
-    font-size: $text;
     font-weight: 700;
-}
-
-/* Layout header*/
-header {
-    @extend %flex-column-center;
-}
-
-header img {
-    width: 52%
-}
-
-.town {
-    @extend %flex-row-center;
-    background-color: $town-color;
-    width: 100%;
-    height: 50px;
 }
 
 /* Layout information */
 .information {
     @extend %flex-column-center;
     width: 100%;
-    padding: 15px;
+    padding-bottom: 57px;
+    background-color: $color-cards;
+    &__title {
+        font-size: $size-title;
+        width: 73%;
+        text-align: center;
+        padding-bottom: 10px;
+        font-weight: $weight-title;
+    }
+    &__txt {
+       width: 84%;
+       text-align: center; 
+    }
 }
 
-/* Layout functioning */
-.functioning {
-    @extend %flex-column-space;
-    margin: 15px;
+.information__button {
+    margin-top: 27px;
 }
-
-.functioning__step {
-    @extend %flex-row-center;
-}
-
 
 .main {
     @extend %flex-column-center;
     background-color: $main-color;
-}
-
-/* Layout container Card */
-.container {
-    @extend %flex-column-center;
-    @include cards-shadow;
-    background-color: $color-cards;
-}
-
-.card-restaurants {
-    width: 90%;
-    margin: 18px;
-    border-radius: $border-cards;
-}
-
-.card-restaurants a {
-    width: 90%;
-    height: 231px;
-}
-
-.card-restaurants img {
-    width: 100%;
-    height: 231px;
-}
-
-.card-content {
-    list-style: none;
-}
-
-/* Layout footer*/
-footer {
-    background-color: $footer-color;
-    color: $police-color;
-    padding: 25px;
-}
-
-footer img {
-    width: 37%;
-    color: #FFFFFF;
 }

@@ -1,1 +1,95 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+@use "../utils/placeholders" as *;
 
+/* Layout container Card */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include cards-shadow;
+    background-color: $color-cards;
+    margin-top: 54px;
+    &__title {
+        font-weight: $weight-title;
+        font-size: $size-title;
+        width: 100%;
+        margin-left: 20px;
+    }
+}
+
+.card__content {
+    width: 90%;
+    margin: 18px;
+    border-radius: $border-cards;
+    background-color: $carte-color;
+}
+
+.card a {
+    width: 90%;
+    height: 231px;
+    text-decoration: none;
+    color: $black-color;
+}
+
+@media (min-width: 768px) {
+    .card {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        height: 700px;
+        &__title {
+            width: 100%;
+        }
+    }
+
+    .card__restaurants {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 55px;
+    }
+
+    .card__restaurants a {
+        width: 34%;
+        margin: 20px;
+        height: 200px;
+    }
+
+    .card__title {
+        margin-left: 380px;
+    }
+}
+
+.card__image img {
+    width: 100%;
+    height: 200px;
+    border-radius: $border-image;
+}
+
+.card__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 13px;
+}
+
+.card__heart {
+    display: flex;
+    align-items: center;
+    margin-right: 33px;
+}
+
+.card__heart .fa-solid {
+    position: relative;
+    z-index: 1;
+    background-clip: text;
+    -webkit-background-clip: text;
+    &:hover {
+        background-image: linear-gradient(200.64deg, var($primary-color) -5.2% var($second-color)110.74%);
+
+    }
+}

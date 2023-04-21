@@ -1,0 +1,63 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+@use "../utils/placeholders" as *;
+
+/* Layout footer*/
+footer {
+    background-color: $footer-color;
+    color: $police-color;
+    padding: 25px;
+    list-style-type: none;
+}
+
+.footer__logo {
+    color: $police-color;
+    font-family: $title;
+    font-size: 20px;
+}
+
+.footer__text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+}
+
+.footer__text .fa-solid {
+    padding-right: 6px;
+}
+
+.footer__texts a {
+    text-decoration: none;
+    color: $police-color;
+}
+
+@media (min-width: 1025px) {
+    footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        
+    }
+
+    .footer__logo {
+        order: 4;
+        font-size: 18px;
+        margin: 17px 20px 0 65px;
+    }
+
+    .footer__content {
+        margin-right: 34px;
+    }
+
+    .footer__text {
+        margin: 10px;
+        padding-top: 35px;
+    }
+
+    .footer__texts {
+        margin: 8px;
+        padding-top: 35px;
+    }
+}

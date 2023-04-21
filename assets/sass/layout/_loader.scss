@@ -1,0 +1,23 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+@use "../utils/placeholders" as *;
+
+.loader {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: $third-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.lettre {
+    color: $primary-color;
+    font-size: 100px;
+    letter-spacing: 20px;
+    font-family: $title;
+    margin-top: 150px;
+    animation: animation-lettre 3s linear infinite;
+}

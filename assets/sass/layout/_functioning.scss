@@ -1,0 +1,84 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+@use "../utils/placeholders" as *;
+
+/* Layout functioning */
+.functioning {
+    @extend %flex-column-space;
+    margin-top: 30px;
+    position: relative;
+    &__title{
+        font-size: $size-title;
+        font-weight: $weight-title;
+        margin-left: 20px;
+    }
+}
+
+.functioning__content{
+    margin-left: 37px;
+    position: relative;
+}
+
+.functioning__step {
+    @extend %flex-row-center;
+    border-radius: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    background-color: $color-cards;
+    width: 80%;
+    margin: 25px 20px 5px 32px;
+}
+
+.functioning__icone {
+    margin: 25px;
+    color: $primary-color;
+}
+
+.functioning__number {
+    border-radius: 50%;
+    color: $police-color;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: $primary-color;
+    padding: 0 12px;
+    position: absolute;
+    left: 0;
+}
+
+@media (min-width: 1025px) {
+    .functioning__content{
+        display: flex;
+        flex-direction: row;
+        width: 73%;
+        margin-left: 189px;
+    }
+
+    .functioning__title {
+        margin-left: 189px
+    }
+
+    .functioning__number {
+        position: relative;
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .functioning{
+        margin-left: 80px;
+    }
+    
+    .functioning__content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+        position: relative;
+    }
+
+    .functioning__number {
+        position: absolute;
+        left: auto;
+        transform: translate(-920%, 0);
+    }
+}
+
