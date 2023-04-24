@@ -75,13 +75,13 @@ table {
 }
 
 .header-logo {
-  height: 55px;
+  height: 36px;
   padding-bottom: 5px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 header img {
-  width: 200px;
+  width: 162px;
 }
 
 .town {
@@ -469,50 +469,164 @@ footer {
     transform: translate(-920%, 0);
   }
 }
-.header-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.information, .main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.town, .functioning__step {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-.functioning {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-
-.loader {
+.container {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #99E2D0;
+  background-color: #99E2D0;
+  opacity: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  visibility: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  animation: visible 5s forwards;
+  -webkit-animation: visible 5s forwards;
 }
 
-.lettre {
-  color: #9356DC;
-  font-size: 100px;
-  letter-spacing: 20px;
-  font-family: "Shrikhand";
-  margin-top: 150px;
-  animation: animation-lettre 3s linear infinite;
+@keyframes visible {
+  from {
+    opacity: 1;
+    display: block;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+.dash {
+  margin: 0 15px;
+  width: 35px;
+  height: 15px;
+  border-radius: 8px;
+  background: #9356DC;
+  box-shadow: 0 0 10px 0 #FF79DA;
+}
+
+.uno {
+  margin-right: -18px;
+  transform-origin: center left;
+  animation: spin 3s linear infinite;
+  -webkit-animation: spin 3s linear infinite;
+}
+
+.dos {
+  transform-origin: center right;
+  animation: spin2 3s linear infinite;
+  animation-delay: 0.2s;
+}
+
+.tres {
+  transform-origin: center right;
+  animation: spin3 3s linear infinite;
+  animation-delay: 0.3s;
+}
+
+.cuatro {
+  transform-origin: center right;
+  animation: spin4 3s linear infinite;
+  animation-delay: 0.4s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(360deg);
+  }
+  30% {
+    transform: rotate(370deg);
+  }
+  35% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(-180deg);
+  }
+  35% {
+    transform: rotate(-190deg);
+  }
+  40% {
+    transform: rotate(-180deg);
+  }
+  78% {
+    transform: rotate(-180deg);
+  }
+  95% {
+    transform: rotate(-360deg);
+  }
+  98% {
+    transform: rotate(-370deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes spin3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  27% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(180deg);
+  }
+  45% {
+    transform: rotate(190deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  62% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(360deg);
+  }
+  80% {
+    transform: rotate(370deg);
+  }
+  85% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin4 {
+  0% {
+    transform: rotate(0deg);
+  }
+  38% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(-360deg);
+  }
+  65% {
+    transform: rotate(-370deg);
+  }
+  75% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
