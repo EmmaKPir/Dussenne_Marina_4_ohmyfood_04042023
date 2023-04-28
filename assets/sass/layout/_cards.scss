@@ -19,8 +19,11 @@
     }
 }
 
+.card__restaurants {
+    width: 100%;
+}
+
 .card__content {
-    width: 90%;
     margin: 18px;
     border-radius: $border-cards;
     background-color: $carte-color;
@@ -32,8 +35,20 @@
     text-decoration: none;
     color: $black-color;
 }
+.card__image img {
+    width: 100%;
+    height: 200px;
+    border-radius: $border-image;
+}
 
-@media (min-width: 768px) {
+.card__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 13px;
+}
+
+@media (min-width: 769px) {
     .card {
         display: flex;
         justify-content: flex-start;
@@ -42,6 +57,7 @@
         &__title {
             width: 100%;
         }
+
     }
 
     .card__restaurants {
@@ -64,32 +80,52 @@
     }
 }
 
-.card__image img {
-    width: 100%;
-    height: 200px;
-    border-radius: $border-image;
-}
 
-.card__info {
+
+/* Animation New */
+.new {
+    position: absolute;
+    margin-left: 180px;
+    margin-top: 15px;
+    color: #008766;
+    width: 80px;
+    height: 29px;
+    background-color: #99E2D0;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-left: 13px;
+    justify-content: center;
+    align-items:center;
 }
-
+/* animation heart */
 .card__heart {
     display: flex;
     align-items: center;
     margin-right: 33px;
+}  
+
+.card__heart i {
+    position: absolute;
 }
 
-.card__heart .fa-solid {
-    position: relative;
-    z-index: 1;
-    background-clip: text;
-    -webkit-background-clip: text;
-    &:hover {
-        background-image: linear-gradient(200.64deg, var($primary-color) -5.2% var($second-color)110.74%);
+.my-heart-full {
+    transition-property: all;
+    -webkit-transition: all;
+    -moz-transition:all;
+    -ms-transition: all;
+    -o-transition: all;
+    transition-duration: 1s;
+    opacity: 0;
+}
 
-    }
+.my-heart-full:hover {
+    display: inline-block;
+    opacity: 1;
+    background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

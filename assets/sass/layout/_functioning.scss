@@ -6,7 +6,6 @@
 .functioning {
     @extend %flex-column-space;
     margin-top: 30px;
-    position: relative;
     &__title{
         font-size: $size-title;
         font-weight: $weight-title;
@@ -15,22 +14,39 @@
 }
 
 .functioning__content{
-    margin-left: 37px;
-    position: relative;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .functioning__step {
-    @extend %flex-row-center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-radius: 20px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     background-color: $color-cards;
-    width: 80%;
+    width: 265px;
     margin: 25px 20px 5px 32px;
 }
 
-.functioning__icone {
-    margin: 25px;
+.functioning__subtitle {
+    margin-right: 7px;
+}
+
+.functioning__icone .my-store {
+    margin: 10px;
+    width: 15px;
+    height: 15px;
     color: $primary-color;
+}
+
+.functioning__icone .icone-menu {
+    margin: 17px;
+    width: 15px;
+    height: 15px;
 }
 
 .functioning__number {
@@ -39,17 +55,21 @@
     font-size: 16px;
     font-weight: 500;
     background-color: $primary-color;
-    padding: 0 12px;
-    position: absolute;
-    left: 0;
+    padding: 0 15px;
+    position: relative;
+    margin-left: -15px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 
 @media (min-width: 1025px) {
     .functioning__content{
         display: flex;
         flex-direction: row;
-        width: 73%;
-        margin-left: 189px;
+        width: 85%;
+        margin-left: 150px;
     }
 
     .functioning__title {
@@ -58,27 +78,29 @@
 
     .functioning__number {
         position: relative;
-        margin-left: 0;
+        margin-left: -20px;
     }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .functioning{
         margin-left: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
     .functioning__content{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 90%;
-        position: relative;
+        align-items: center;
+        width: 322px;
     }
 
     .functioning__number {
-        position: absolute;
-        left: auto;
-        transform: translate(-920%, 0);
+        position: relative;
+        margin-left: -30px;
     }
 }
 
