@@ -2,14 +2,14 @@
 //@import "./utils/mixins";
 //@import "./utils/functions";
 //@import "./utils/placeholders";
-@import "./base/reset";
-@import "./layout/header";
-@import "./base/typography";
-@import "./base/base";
-@import "./layout/cards";
-@import "./composants/button";
-@import "./layout/footer";
-@import "./layout/functioning";
-@import "./layout/loader";
-@import "./pages/restaurants.scss";
+@use "./base/reset";
+@use "./base/typography";
+@use "./base/base";
+@use "./composants/button";
+@use "./layout/header";
+@use "./layout/cards";
+@use "./layout/footer";
+@use "./layout/functioning";
+@use "./layout/loader";
+@use "./pages/restaurants.scss";
 

@@ -1,12 +1,12 @@
 @use "../utils/variables" as *;
 @use "../utils/mixins" as *;
 
-.information__button {
+button {
     border-radius: 25px;
     width: 218px;
     height: 50px;
     @include button-shadow;
-    background: linear-gradient(5deg, #9356DC -11.44%, #FF79DA 123.93%);
+    background: linear-gradient(348deg, #9356DC -11.44%, #FF79DA 123.93%);
     border: 0;
     transition: transform 400ms;
     &:hover {
@@ -22,4 +22,10 @@
     font-size: 16px;
     font-weight: 500;
     text-decoration: none;
+}
+
+.btn__order  p {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
 }

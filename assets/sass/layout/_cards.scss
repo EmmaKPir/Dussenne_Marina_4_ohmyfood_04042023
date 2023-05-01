@@ -15,7 +15,8 @@
         font-weight: $weight-title;
         font-size: $size-title;
         width: 100%;
-        margin-left: 20px;
+        margin-left: 25px;
+        margin-top: 20px;
     }
 }
 
@@ -25,6 +26,7 @@
 
 .card__content {
     margin: 18px;
+    height: 251px;
     border-radius: $border-cards;
     background-color: $carte-color;
 }
@@ -39,13 +41,25 @@
     width: 100%;
     height: 200px;
     border-radius: $border-image;
+    z-index: 1;
 }
 
 .card__info {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 5px;
     margin-left: 13px;
+}
+
+.card__name h3{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.card__txt {
+    font-weight: 300;
 }
 
 @media (min-width: 769px) {
@@ -72,7 +86,7 @@
     .card__restaurants a {
         width: 34%;
         margin: 20px;
-        height: 200px;
+        height: 251px;
     }
 
     .card__title {
@@ -80,26 +94,26 @@
     }
 }
 
+/**** New ****/
 
+.card__image {
+    position: relative;
+}
 
-/* Animation New */
 .new {
     position: absolute;
-    margin-left: 180px;
-    margin-top: 15px;
-    color: #008766;
+    color: $new-color;
     width: 80px;
     height: 29px;
-    background-color: #99E2D0;
+    bottom: 150px;
+    right: 40px;
+    background-color: $third-color;
     border-radius: 2px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    -ms-border-radius: 2px;
-    -o-border-radius: 2px;
     display: flex;
     justify-content: center;
     align-items:center;
 }
+
 /* animation heart */
 .card__heart {
     display: flex;
@@ -113,10 +127,7 @@
 
 .my-heart-full {
     transition-property: all;
-    -webkit-transition: all;
-    -moz-transition:all;
-    -ms-transition: all;
-    -o-transition: all;
+    transition: all;
     transition-duration: 1s;
     opacity: 0;
 }
@@ -129,3 +140,4 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+

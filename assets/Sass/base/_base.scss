@@ -20,6 +20,7 @@ h1 {
         font-size: $size-title;
         width: 73%;
         text-align: center;
+        padding-top: 30px;
         padding-bottom: 10px;
         font-weight: $weight-title;
     }
@@ -36,4 +37,8 @@ h1 {
 .main {
     @extend %flex-column-center;
     background-color: $main-color;
+}
+
+body {
+    font-family: $text;
 }
