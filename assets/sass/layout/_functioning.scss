@@ -33,7 +33,7 @@
 }
 
 .functioning__subtitle {
-    margin-right: 7px;
+    margin-right: 15px;
 }
 
 .functioning__icone .my-store {
@@ -68,7 +68,7 @@
         display: flex;
         flex-direction: row;
         width: 85%;
-        margin-left: 150px;
+        margin-left: 100px;
     }
 
     .functioning__title {
@@ -79,7 +79,6 @@
 
 @media (min-width: 768px) and (max-width: 1024px) {
     .functioning{
-        margin-left: 80px;
         display: flex;
         justify-content: center;
         align-items: center;

@@ -13,11 +13,10 @@ button {
         @include button-shadow-hover;
         opacity: 0.8;
         transition-property: all;
-        transition-duration: 1s;
     }
 }
 
-.information__button a {
+.information__button {
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 500;

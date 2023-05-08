@@ -119,25 +119,22 @@
     display: flex;
     align-items: center;
     margin-right: 33px;
+    & i {
+        position: absolute;
+    }
 }  
-
-.card__heart i {
-    position: absolute;
-}
 
 .my-heart-full {
     transition-property: all;
     transition: all;
     transition-duration: 1s;
     opacity: 0;
+    &:hover {
+        display: block;
+        opacity: 1;
+        background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 }
-
-.my-heart-full:hover {
-    display: inline-block;
-    opacity: 1;
-    background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-

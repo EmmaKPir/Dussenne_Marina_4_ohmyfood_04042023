@@ -8,8 +8,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10000;
-    /**** display: none;****/
+    z-index: 2;
+    pointer-events: none;
     animation: container 5s forwards;
     -webkit-animation: container 5s forwards;
 }
@@ -17,20 +17,25 @@
 @keyframes container {
   0% {
     opacity: 1;
+    z-index: 2;
   }
   70% {
     opacity: 1;
+    z-index: 2;
   }
   100% {
     opacity: 0;
+    z-index: -2;
   }
 }
   
   .letter {
     color: $primary-color;
-    font-size: 80px;
-    letter-spacing: 15px;
+    font-family: $title;
+    font-size: 40px;
+    letter-spacing: 5px;
     animation: flash 1.2s linear infinite;
+    -webkit-animation: flash 1.2s linear infinite;
 }
   
   @keyframes flash {
@@ -80,6 +85,20 @@
 }
 
 .container img {
-  width: 120px;
+  width: 50px;
   height: 210px;
+  position: absolute;
+  top: 150px;
+}
+
+@media (min-width:769px) {
+    .letter {
+        font-size: 80px;
+    }
+    .container img {
+        right: 300px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
 }
