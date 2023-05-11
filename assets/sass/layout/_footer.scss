@@ -43,7 +43,6 @@ footer {
         flex-direction: row;
         align-items: center;
         justify-content: flex-end;
-        
     }
 
     .footer__logo {
@@ -53,6 +52,8 @@ footer {
     }
 
     .footer__content {
+        display: flex;
+        flex-direction: row;
         margin-right: 34px;
     }
 

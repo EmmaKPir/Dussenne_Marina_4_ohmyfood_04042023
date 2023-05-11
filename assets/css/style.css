@@ -344,6 +344,8 @@ footer {
     margin: 17px 20px 0 65px;
   }
   .footer__content {
+    display: flex;
+    flex-direction: row;
     margin-right: 34px;
   }
   .footer__text {
@@ -535,7 +537,7 @@ footer {
   width: 50px;
   height: 210px;
   position: absolute;
-  top: 150px;
+  top: 230px;
 }
 
 @media (min-width: 769px) {
@@ -574,6 +576,7 @@ footer {
 .pages__header a {
   display: flex;
   align-items: center;
+  margin-left: 20px;
 }
 
 .pages__image img {
@@ -586,9 +589,11 @@ footer {
   flex-direction: column;
   align-items: center;
   position: relative;
-  margin-top: -30px;
+  top: -30px;
+  margin-bottom: -45px;
   background: #F7F7F7;
-  border-radius: 40px;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
   width: 100%;
 }
 .menu__head {
@@ -615,40 +620,26 @@ footer {
   width: 100%;
 }
 
+.menu__section-name {
+  width: 100%;
+}
+
 .menu__section h3 {
   font-size: 16px;
   font-weight: 300;
   width: 100%;
-  margin-left: 20px;
+  margin-left: 18px;
   margin-bottom: 15px;
   position: relative;
 }
 
-.underline-entrees {
+.underline {
   border-bottom: 3px solid #99E2D0;
   width: 40px;
   height: 3px;
-  position: absolute;
-  top: 80px;
-  left: 10px;
-}
-
-.underline-plats {
-  border-bottom: 3px solid #99E2D0;
-  width: 40px;
-  height: 3px;
-  position: absolute;
-  top: 350px;
-  left: 10px;
-}
-
-.underline-desserts {
-  border-bottom: 3px solid #99E2D0;
-  width: 40px;
-  height: 3px;
-  position: absolute;
-  top: 620px;
-  left: 10px;
+  position: relative;
+  top: -13px;
+  left: 18px;
 }
 
 .menu__section-dish {
@@ -676,12 +667,14 @@ footer {
   font-weight: 500;
   margin-bottom: 5px;
   width: 100%;
+  white-space: nowrap;
 }
 
 .menu__dish p {
   font-size: 15px;
   font-weight: 300;
   width: 100%;
+  white-space: nowrap;
 }
 
 .menu__dish {
@@ -843,6 +836,34 @@ button {
 
 .my-heart-empty:hover {
   z-index: 1;
+}
+
+@media (min-width: 1025px) {
+  .menu {
+    width: 73%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -30px;
+  }
+  .menu__section {
+    width: 65%;
+  }
+  .menu__head {
+    margin-top: 47px;
+  }
+  .menu__section-name {
+    width: 100%;
+  }
+  .menu__section-name h3 {
+    width: 100%;
+    margin-top: 30px;
+    margin-left: 22px;
+  }
+  .underline {
+    position: relative;
+    top: -12px;
+    left: 22px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
