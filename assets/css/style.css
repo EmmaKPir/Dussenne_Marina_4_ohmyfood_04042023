@@ -276,6 +276,7 @@ header img {
 .card__heart {
   display: flex;
   align-items: center;
+  font-size: 25px;
   margin-right: 33px;
 }
 .card__heart i {
@@ -377,8 +378,8 @@ footer {
 
 .functioning__step {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
   border-radius: 20px;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   background-color: #F7F7F7;
@@ -388,6 +389,7 @@ footer {
 
 .functioning__subtitle {
   margin-right: 15px;
+  width: 100%;
 }
 
 .functioning__icone .my-store {
@@ -397,7 +399,10 @@ footer {
   color: #9356DC;
 }
 
-.functioning__icone .icone-menu {
+.functioning__icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 17px;
   width: 15px;
   height: 15px;
@@ -409,7 +414,7 @@ footer {
   font-size: 16px;
   font-weight: 500;
   background-color: #9356DC;
-  width: 25px;
+  width: 32px;
   height: 25px;
   position: relative;
   text-align: center;
@@ -556,6 +561,9 @@ footer {
   flex-direction: row;
   justify-content: flex-start;
   width: 100%;
+}
+.pages__header a {
+  color: black;
 }
 
 .pages__logo {
@@ -771,6 +779,7 @@ footer {
   background-color: #99E2D0;
   width: 59px;
   height: 69px;
+  font-size: 20px;
   border-radius: 0px 15px 15px 0px;
   -webkit-border-radius: 0px 15px 15px 0px;
   -moz-border-radius: 0px 15px 15px 0px;
@@ -784,27 +793,38 @@ footer {
   white-space: nowrap;
   text-overflow: ellipsis;
   width: 100%;
+  animation: text 500ms cubic-bezier(0.9, 0.06, 1, 0.34);
 }
 .menu__section-dish:hover p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   width: 100%;
+  animation: text 500ms cubic-bezier(0.9, 0.06, 1, 0.34);
 }
 
+@keyframes text {
+  0% {
+    max-width: 100%;
+  }
+  50% {
+    max-width: 99%;
+  }
+  75% {
+    max-width: 98.5%;
+  }
+  100% {
+    max-width: 98%;
+  }
+}
 /**** Layout button order ****/
 button {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.order {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 30px;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 
 /**** animation heart ****/
