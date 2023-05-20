@@ -1,0 +1,44 @@
+@use "../utils/variables" as *;
+@use "../utils/mixins" as *;
+@use "../utils/placeholders" as *;
+
+body {
+    font-family: $text;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+/* Layout information */
+.information {
+    @extend %flex-column-center;
+    width: 100%;
+    padding-bottom: 57px;
+    background-color: $color-cards;
+    &__title {
+        font-size: $size-title;
+        width: 73%;
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        font-weight: $weight-title;
+    }
+    &__txt {
+       width: 84%;
+       text-align: center; 
+    }
+}
+
+.information__button {
+    margin-top: 27px;
+}
+
+.main {
+    @extend %flex-column-center;
+    background-color: $main-color;
+}
+
+body {
+    font-family: $text;
+}
