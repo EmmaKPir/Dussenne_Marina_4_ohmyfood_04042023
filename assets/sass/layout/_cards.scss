@@ -42,6 +42,7 @@
     height: 200px;
     border-radius: $border-image;
     z-index: 1;
+    object-fit: cover;
 }
 
 .card__info {
